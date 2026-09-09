@@ -25,16 +25,46 @@
         Autor: Felipe Gallardo Calderón
     </p>
 
-    <h2>Productos</h2>
+    <main class="contenedor">
 
-    <ul>
-        <li>Café — Stock: 20</li>
-        <li>Leche — Stock: 15</li>
-        <li>Azúcar — Stock: 8</li>
-        <li>Arroz — Stock: 30</li>
-    </ul>
+        <section class="panel">
+            <h2>Agregar producto</h2>
+            <form id="form-producto">
+                <input type="text" id="input-nombre" placeholder="Nombre del producto" required>
+                <input type="number" id="input-stock" placeholder="Stock" min="0" required>
+                <button type="submit">Guardar</button>
+            </form>
+            <p id="mensaje-error" class="mensaje-error"></p>
+        </section>
 
-    <button>Ingresar al sistema</button>
+        <section class="panel">
+            <h2>Productos</h2>
+            <input type="text" id="input-filtro" placeholder="Buscar producto...">
+            <label class="filtro-check">
+                <input type="checkbox" id="check-bajo-stock">
+                Mostrar solo stock bajo (&lt; 5)
+            </label>
+
+            <div id="estado-carga" class="estado-carga">Cargando productos...</div>
+
+            <table id="tabla-productos">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-tabla"></tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- Firebase SDK (versión "compat", sin necesidad de bundler ni npm) -->
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+    <script src="app.js"></script>
 
 </body>
 
