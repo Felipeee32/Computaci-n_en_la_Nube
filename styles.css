@@ -1,72 +1,91 @@
-/* Estilos Generales */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
-    color: #333333;
-    line-height: 1.6;
+.contenedor {
+    width: 100%;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px;
+    gap: 1.5rem;
+}
+
+.panel {
+    background-color: #ffffff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+#form-producto {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+#form-producto input {
+    flex: 1;
+    min-width: 120px;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.mensaje-error {
+    color: #c53030;
+    font-weight: bold;
+    min-height: 1.2rem;
+}
+
+#input-filtro {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
     box-sizing: border-box;
 }
 
-/* Contenedor Principal (Simulado por el flujo del body) */
-h1, h2, p, button {
-    text-align: center;
-    max-width: 600px;
-}
-
-/* Títulos */
-h1 {
-    font-size: 2.5rem;
-    color: #1a365d;
-    margin-bottom: 0.5rem;
-}
-
-h2 {
-    font-size: 1.8rem;
-    color: #2b6cb0;
-    margin-top: 0;
-    font-weight: 400;
-}
-
-/* Párrafo */
-p {
-    font-size: 1.1rem;
+.filtro-check {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
     color: #4a5568;
-    margin-bottom: 2rem;
-    background-color: #ffffff;
-    padding: 15px 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border-left: 5px solid #2b6cb0;
 }
 
-/* Botón de Acción */
-button {
-    background-color: #3182ce;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 12px 30px;
+#tabla-productos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabla-productos th,
+#tabla-productos td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.btn-editar,
+.btn-eliminar {
     border: none;
-    border-radius: 25px;
+    border-radius: 15px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(49, 130, 206, 0.3);
+    color: white;
+    margin-right: 5px;
 }
 
-button:hover {
-    background-color: #2b6cb0;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(49, 130, 206, 0.4);
+.btn-editar {
+    background-color: #3182ce;
 }
 
-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(49, 130, 206, 0.4);
+.btn-eliminar {
+    background-color: #c53030;
+}
+
+.estado-carga {
+    color: #718096;
+    font-style: italic;
 }
